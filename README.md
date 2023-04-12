@@ -60,3 +60,61 @@ cd DRS_Starter_Kit
 ```
 docker-compose down
 ```
+## Running The App:
+There are two testing modules I implemented, unit testing, and manual testing: <br>
+**Manual Testing:** 
+```
+./run_tests.py
+```
+![image](https://user-images.githubusercontent.com/63073172/231476874-9f91bcee-2627-4bde-8748-4e3e21d2f146.png)
+
+**Unit Testing:**
+```
+./test_endpoints.py
+```
+![image](https://user-images.githubusercontent.com/63073172/231477500-01f856ab-07c1-4096-bb05-9e5a1c876d7f.png)
+
+## Bundling the application for reuse in another environment:
+**Cloud Deployment** <br>
+If you intend to deploy the application in a cloud environment, such as AWS, Azure, or Google Cloud, you can package it as a container using Docker. Docker provides a containerization solution that allows you to package the application along with its dependencies, configurations, and runtime environment into a single container image. You can then push the container image to a container registry, such as Docker Hub, and deploy it to any cloud environment that supports Docker containers. <br>
+
+To package the application as a Docker container, you would need to create a Dockerfile that specifies the base image, installs the necessary dependencies, copies the application code, and sets up the runtime environment. Here's an example Dockerfile for the given application: <br>
+
+```
+# Dockerfile
+
+# Use an appropriate base image
+FROM python:3.9
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the application code to the container
+COPY . /app
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Set the entry point for the application
+CMD ["python", "app.py"]
+```
+Build the Docker image using the Dockerfile.
+```
+docker build -t my-app .
+```
+
+Push the Docker image to a container registry, such as Docker Hub.
+```
+docker push my-app
+```
+
+**Deployment on Another Desktop Machine or Alternative Operating System** <br>
+If you want to package the application for reuse on another desktop machine, you can create a standalone executable using a tool like PyInstaller or cx_Freeze. These tools allow you to bundle the Python code, dependencies, and runtime into a single executable file that can be run on any compatible desktop machine without requiring any additional installations or dependencies. <br>
+
+To package the application as a standalone executable using PyInstaller, for example, you would need to install PyInstaller using pip, and then use the pyinstaller command to create the executable. Here's an example command: <br>
+
+```
+pip install pyinstaller
+pyinstaller app.py
+```
+This will create a standalone executable file for the application in the dist directory, which can be copied and run on any compatible desktop machine.
