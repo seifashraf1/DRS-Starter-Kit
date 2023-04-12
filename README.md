@@ -66,7 +66,7 @@ There are two testing modules I implemented, unit testing, and manual testing: <
 ```
 ./run_tests.py
 ```
-![image](https://user-images.githubusercontent.com/63073172/231476874-9f91bcee-2627-4bde-8748-4e3e21d2f146.png)
+![image](https://user-images.githubusercontent.com/63073172/231483753-3f3588ef-2a2f-40e1-8928-f41dc0ddad94.png)
 
 **Unit Testing:**
 ```
