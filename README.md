@@ -70,7 +70,8 @@ There are two testing modules I implemented, unit testing, and manual testing: <
 
 **Unit Testing:**
 ```
-./resources/drs/test_endpoints.py
+cd /resources/drs
+pytest test_endpoints.py
 ```
 ![image](https://user-images.githubusercontent.com/63073172/231477500-01f856ab-07c1-4096-bb05-9e5a1c876d7f.png)
 
