@@ -115,6 +115,6 @@ To package the application as a standalone executable using PyInstaller, for exa
 
 ```
 pip install pyinstaller
-pyinstaller app.py
+pyinstaller run_tests.py
 ```
 This will create a standalone executable file for the application in the dist directory, which can be copied and run on any compatible desktop machine.
