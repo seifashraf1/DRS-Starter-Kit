@@ -64,13 +64,13 @@ docker-compose down
 There are two testing modules I implemented, unit testing, and manual testing: <br>
 **Manual Testing:** 
 ```
-./run_tests.py
+./resources/drs/run_tests.py
 ```
 ![image](https://user-images.githubusercontent.com/63073172/231483753-3f3588ef-2a2f-40e1-8928-f41dc0ddad94.png)
 
 **Unit Testing:**
 ```
-./test_endpoints.py
+./resources/drs/test_endpoints.py
 ```
 ![image](https://user-images.githubusercontent.com/63073172/231477500-01f856ab-07c1-4096-bb05-9e5a1c876d7f.png)
 
